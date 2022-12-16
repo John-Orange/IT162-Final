@@ -1,0 +1,215 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* Remove margins and padding from the list, and add a black background color */
+.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    z-index: 1;
+    
+}
+
+/* Float the list items side by side */
+/*.topnav li {float: right;}*/
+
+/* Style the links inside the list items */
+.topnav li a {
+    float: left;
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 0px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    width:25%
+    
+}
+
+/* Change background color of links on hover */
+.topnav li a:hover {background-color: #555;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+.topnav li.icon {display: none;}
+
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width:100%;
+}
+
+
+/*position*/
+
+
+.container{
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    position: relative;
+    width:85%;
+    overflow:hidden;
+}
+
+.firstnail{
+    display:block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    opacity: 0.8;
+    background-color: #008CBA;
+    overflow: auto;
+    width: 0;
+    height: 100%;
+    transition: 0.8s ease;
+}
+
+.container:hover .overlay {
+    width: 100%;
+    left: 0;
+  }
+
+.about {
+    white-space:nowrap;
+    color: white;
+    font-size: 30px;
+    position:absolute;
+    overflow:hidden;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* pictures */
+
+.gc {
+  display: block;
+  margin:auto;
+  width: 80%;
+}
+
+
+
+.gallery{
+   float: left;
+   text-align: center;
+   width: 500px;
+   height: 300px;
+   border: 1px solid rgb(171, 19, 19);
+   width: 24.8%;
+}
+
+.menu {
+    width:100%
+}
+
+
+
+
+
+
+/* DESKTOP */
+@media all and (min-width:1400px) {
+	
+    main.wrapper {
+         width:100%;
+         margin:auto;
+     }
+ 
+     section {
+         width:100%;
+         float:left;
+     }
+     
+      /*aside {	
+         width:34%;
+         float:right;
+     }*/
+             
+     img.desktop {
+        float:left;
+        width:50%;
+         display:inline-block;
+     }
+     
+     img.tablet, img.phone {
+        display:none;
+     }  
+     
+     /* Change background color of navigation on selected page */
+     ul.topnav li a.selected {
+         background-color: #ccc;
+         color:#000;
+        }
+ }
+ 
+ 
+ /* TABLET */
+ @media all and (min-width:737px) and (max-width:1399px) {
+     
+     section {
+         width:100%;
+         float:left;
+     }
+     
+     /*aside {	
+         width:39%;
+         float:right;
+     }*/
+     
+    .gallery{
+        width:33.08%;
+    }
+
+
+
+     img.tablet {
+         width:100%;
+         display:inline-block;
+     }
+     
+     img.desktop, img.phone {
+        display: none;
+     }  
+     
+     
+     /* Change background color of navigation on selected page */
+     ul.topnav li a.selected {
+         background-color: #ccc;
+         color:#000;
+     }
+ }
+ 
+ /* PHONE */
+ @media all and (max-width:736px) {
+     
+     img.phone {
+        width:100%;
+        display:inline-block;
+     }
+
+    .gallery{
+        width:48%;
+    }
+
+     .container{
+        width: 100%;
+    }
+     
+    img.tablet, img.desktop {
+        display:none;
+    }  
+ 
+ }
+ 
